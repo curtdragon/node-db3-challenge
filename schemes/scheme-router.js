@@ -53,7 +53,7 @@ router.post('/', (req, res) => {
   .then(scheme => {
     res.status(201).json(scheme);
   })
-  .catch (err => {
+  .catch (({err}) => {
     res.status(500).json({ message: 'Failed to create new scheme' });
   });
 });
